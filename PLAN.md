@@ -1,41 +1,44 @@
-Plano para modelar e melhorar a página:
+# Plano de Implementação
 
-1. Análise Geral e Inventário
-   - Revisar o HTML fornecido e a captura para mapear todas as seções, textos, imagens, ícones, CTAs e carrosséis existentes.
-   - Identificar quais elementos já utilizam estilos globais e quais dependem de estilos inline ou específicos.
-   - Criar um inventário de melhorias visuais (tipografia, espaçamentos, contrastes, botões, cards, mockups, responsividade) mantendo copy e estrutura.
+1. **Mapeamento da Estrutura Atual**
+   - Revisar a captura fornecida e o HTML existente para confirmar todas as seções, CTAs, blocos de argumentos e depoimentos na ordem atual.
+   - Documentar cada seção com seus componentes (títulos, textos, imagens, botões, listas) para garantir fidelidade na reestruturação visual.
 
-2. Estruturação do Layout (sem alterar ordem ou conteúdo)
-   - Confirmar a hierarquia de containers Elementor para cada seção a fim de preservar a ordem exata.
-   - Planejar ajustes apenas em classes existentes ou novas classes utilitárias que não quebrem a estrutura, mantendo os mesmos widgets e IDs.
+2. **Inventário de Conteúdo Fixo**
+   - Identificar copy principal, promessas, preços, bônus, planos, depoimentos, garantias e links de checkout que não podem ser alterados.
+   - Marcar nos arquivos HTML onde cada elemento está localizado para evitar modificações indevidas em conteúdo sensível.
 
-3. Tipografia e Hierarquia Visual
-   - Definir ajustes de tamanhos, pesos e cores das fontes em CSS para reforçar títulos, subtítulos, argumentos e depoimentos.
-   - Manter a fonte Poppins (já carregada), mas padronizar tamanhos/responsividade com variáveis CSS existentes.
+3. **Planejamento de Melhorias Visuais**
+   - Definir ajustes pontuais de layout (ex.: espaçamentos, alinhamentos, hierarquia tipográfica) respeitando a ordem e o texto atual.
+   - Planejar melhorias em cards e seções usando estilos CSS adicionais (sombras suaves, bordas arredondadas, gradientes leves) para modernizar sem mudar estrutura.
+   - Elaborar esquema de cores e variações de background (tons de marrom, rosa e off-white presentes na referência) para criar contraste entre blocos.
 
-4. Paleta de Cores e Fundo
-   - Melhorar contraste usando a paleta principal (#fb6073, marrons e neutros claros) já presente.
-   - Aplicar fundos alternados suaves entre seções para melhorar leitura sem descaracterizar.
+4. **Aprimoramento de Hero e CTAs**
+   - Ajustar tipografia e espaçamentos do hero para destacar promessa principal.
+   - Planejar novo estilo para botões (cores sólidas, sombra, estados hover) garantindo destaque e consistência entre CTAs.
+   - Avaliar inserção de micro-componentes (selos de confiança simples, setas) apenas se já existirem referências na página.
 
-5. Componentes Principais
-   - Hero: alinhar melhor o texto, reforçar CTA e avaliação com layout responsivo (colunas alinhadas, espaçamentos consistentes, botões com estilo atualizado).
-   - Cards de receitas: uniformizar cards com sombras sutis, bordas arredondadas e distribuição em grid responsivo.
-   - Depoimentos/imagens: criar molduras/coheiras para mobile, manter imagens originais e carrosséis configurados.
-   - Carrosséis: verificar setings para suavizar velocidade e assegurar lazyload.
+5. **Reorganização dos Depoimentos e Prova Social**
+   - Manter imagens e depoimentos originais, porém planejar um container responsivo com carrossel ou grid melhor alinhado.
+   - Definir bordas, sombras e tipografia para facilitar leitura em mobile.
 
-6. CTAs e Botões
-   - Garantir que todos os botões usem estilo consistente (bordas arredondadas, gradiente ou cor sólida, estados hover) e mantenham links originais (#cta ou checkout).
-   - Destacar a seção final de oferta com CTA contrastante, reforçando preços e bônus sem alterar textos.
+6. **Cards de Receitas e Bônus**
+   - Preparar cards com fotos e descrições usando layout consistente (imagem superior, texto em fundo claro, ícones ou checkmarks discretos já existentes).
+   - Ajustar espaçamentos internos para evitar blocos muito densos em telas pequenas.
 
-7. Responsividade e Mobile-first
-   - Testar breakpoints declarados (desktop, tablet, mobile) e ajustar paddings/margens para leitura confortável.
-   - Garantir que imagens/carrosséis e cards se empilhem corretamente em telas menores sem alterar ordem das seções.
+7. **Sessões de Oferta e Planos**
+   - Garantir que tabelas/preços mantenham valores e links intactos.
+   - Planejar uso de destaques visuais (badges “Mais vendido”, fundo diferenciado) sem alterar copy.
 
-8. Performance e Acessibilidade
-   - Manter lazyload existente e evitar adicionar scripts pesados.
-   - Ajustar textos alternativos e semântica existente apenas se necessário para acessibilidade (sem mudar copy).
+8. **Melhorias Responsivas**
+   - Definir breakpoints (desktop, tablet, mobile) para reorganizar colunas sem mudar ordem lógica das seções.
+   - Planejar ajustes de tipografia e padding específicos para mobile, garantindo legibilidade e CTAs sempre visíveis.
 
-9. Validação Final
-   - Revisar todo o HTML/CSS após ajustes, conferindo que nenhuma copy, preço, bônus, link ou estrutura foi alterada.
-   - Testar visualmente (mentalmente/por inspeção) para assegurar hierarquia, contraste, espaçamentos e CTAs mais evidentes.
-   - Garantir que o arquivo permaneça funcional, responsivo e pronto para publicação.
+9. **Otimização de Performance e Acessibilidade**
+   - Revisar uso de imagens: manter URLs fornecidas e aplicar atributos `loading="lazy"` quando possível.
+   - Verificar contrastes de cor e hierarquia de heading tags para melhor SEO e acessibilidade.
+
+10. **Checklist Final**
+   - Conferir se nenhuma copy, preço, bônus ou link foi alterado.
+   - Validar que todos os elementos presentes na página original continuam visíveis e na mesma ordem.
+   - Revisar HTML/CSS final para garantir que está pronto para publicação e responsivo conforme solicitado.
